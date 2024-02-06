@@ -1,10 +1,6 @@
 const getTotalBalanceByGender = (users, gender) => {
 
-    return users.map((user) => user) 
-
-    .filter((user) => user.gender === gender)
-
-    .toSorted((genderMale, genderFemale) => genderMale.name.localeCompare(genderFemale.gender))
+    return users.filter((user) => user.gender === gender)
 
     .reduce((intermediateBalance, user) => {
 
